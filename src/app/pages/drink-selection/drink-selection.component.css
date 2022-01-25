@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  grid-template-columns: 55vw 40vw;
+  grid-template-rows: 100vh;
+  grid-template-areas: "drink cart";
+}
+.drink-list-container {
+  grid-area: drink;
+}
+
+.cart-container {
+  grid-area: cart;
+}
+
+.flex-container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 100px;
+}

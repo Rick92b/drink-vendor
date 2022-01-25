@@ -1,0 +1,36 @@
+<div class="card-container">
+  <mat-card class="card">
+    <mat-card-content>
+      <mat-stepper linear #stepper>
+        <mat-step>
+          <ng-template matStepLabel>Purchase Summary</ng-template>
+          <div class="form-section">
+            <p><b>Total Order Purchase:</b> {{getTotalCost() | currency: 'EUR'}}</p>
+            <mat-checkbox style="margin: 0 10px" [(ngModel)]="checked"><p>Apply 20% Discount Code</p></mat-checkbox>
+            <button mat-button matStepperNext>
+              <mat-icon>shopping_cart</mat-icon>
+              Proceed to payment
+            </button>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Payment Option</ng-template>
+          <div class="form-section">
+            <h4>Choose payment method below</h4>
+            <button mat-button matStepperNext>Credit Card</button>
+            <button [disabled]="totalCost > 10" mat-button matStepperNext>Apple Pay</button>
+            <button [disabled]="totalCost > 10" mat-button matStepperNext>Paypal</button>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <div class="form-section">
+            <p>You are now done.</p>
+          </div>
+        </mat-step>
+      </mat-stepper>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+

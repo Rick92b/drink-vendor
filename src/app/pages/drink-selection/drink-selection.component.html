@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="drink-list-container">
+    <div class="flex-container">
+      <ng-container *ngFor="let drink of drinks$ | async">
+        <drink-showcase [drink]="drink"></drink-showcase>
+      </ng-container>
+    </div>
+  </div>
+  <div class="cart-container">
+    <div class="flex-container">
+      <item-cart (goToPaymentPage)="goToPaymentPage()"></item-cart>
+    </div>
+  </div>
+</div>
+
+
+
+
+

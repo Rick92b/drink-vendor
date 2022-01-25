@@ -1,0 +1,12 @@
+.card-container, .form-section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card {
+  min-width: 50vw;
+  max-width: 60vw;
+}
+
